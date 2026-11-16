@@ -7,4 +7,4 @@ EXPOSE 8080
 
 ENTRYPOINT ["/bin/sh", "-c"]
 
-CMD ["export RCLONE_CONFIG_DRIME_TOKEN=\"$DRIME_API_TOKEN\"; exec rclone serve webdav drime: --addr 0.0.0.0:${PORT} --user \"$WEBDAV_USER\" --pass \"$WEBDAV_PASSWORD\""]
+CMD ["export RCLONE_DRIME_ACCESS_TOKEN=\"$DRIME_API_TOKEN\"; exec rclone serve webdav drime: --addr 0.0.0.0:${PORT} --user \"$WEBDAV_USER\" --pass \"$WEBDAV_PASSWORD\""]
